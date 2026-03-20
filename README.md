@@ -1,13 +1,11 @@
 <div align="center">
 
-
-
-<h1>ELVA-Q 0x53</h1>
+<h1><B>ELVA-Q 0x53</B></h1>
 
 ### **Quantum Circuit Simulator**
 *Built from mathematical first principles — no quantum SDK required*
 
-
+<br/>
 
 ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![CMake](https://img.shields.io/badge/CMake-3.14+-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
@@ -28,6 +26,26 @@
 
 ---
 
+## 🖥️ Screenshots
+
+<div align="center">
+
+**QFT(4) Circuit — 4 Qubits · 10 Gates · Bloch Sphere · State Visualizer**
+
+![QFT Circuit with Bloch Sphere](screenshots/qft_circuit.png)
+
+<br/>
+
+**QRNG(4) — Quantum Random Number Generator · 1024 Shots Histogram**
+
+![QRNG Histogram and Shot Results](screenshots/qrng_histogram.png)
+
+</div>
+
+> *Left panel: Gate Palette · Centre: Circuit Editor · Right: Bloch Sphere + State Visualizer*
+
+---
+
 ## ✨ Features
 
 | Category | Details |
@@ -35,16 +53,10 @@
 | 🔢 **State Vector Engine** | Exact dense simulation up to 20 qubits (2²⁰ amplitudes) |
 | 🔷 **Gate Library** | 20+ gates: Pauli, Clifford, Rotation (Rx/Ry/Rz), U3, CNOT, CZ, SWAP, Toffoli, iSWAP |
 | 📐 **Measurement** | Born-rule projective measurement with full wavefunction collapse |
-| 🌐 **Bloch Sphere** | Real-time 3D Bloch vector visualization from Pauli expectation values |
+| 🌐 **Bloch Sphere** | Real-time 3D Bloch vector from Pauli expectation values ⟨X⟩ ⟨Y⟩ ⟨Z⟩ |
 | 📊 **Shot Simulation** | Multi-shot histogram engine (10 – 10,000 shots) |
 | 🧠 **Built-in Algorithms** | Bell states, GHZ, QFT, Grover, Teleportation, BV, QAOA, and more |
 | ⚡ **Real-time GUI** | Immediate-mode UI via Dear ImGui — 60 fps, no layout files |
-
----
-
-## 🖥️ Screenshots
-
-> *Coming soon — build and run to see the simulator in action*
 
 ---
 
@@ -63,8 +75,7 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/itss-meS/ELVA-Q-0x53-Quantum-Circuit-Simulator-.git
-
+git clone https://github.com/YOUR_USERNAME/ELVA-Q-0x53.git
 cd ELVA-Q-0x53
 
 # 2. Configure
@@ -74,7 +85,7 @@ cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release
 
 # 4. Run
-./build/quantum_sim_gui          # Linux / macOS
+./build/quantum_sim_gui            # Linux / macOS
 build\Release\quantum_sim_gui.exe  # Windows
 ```
 
@@ -117,10 +128,10 @@ P(x) = |αₓ|²       post-measurement: |Ψ⟩ → |x⟩
 |---|---|---|
 | Bell \|Φ+⟩ \|Φ−⟩ \|Ψ+⟩ \|Ψ−⟩ | 2 | Maximal entanglement, CHSH violation |
 | GHZ(3), GHZ(4) | 3–4 | Multipartite entanglement |
-| QFT(3), QFT(4) | 3–4 | Quantum Fourier Transform, O(n²) gates vs O(N log N) classical |
+| QFT(3), QFT(4) | 3–4 | Quantum Fourier Transform — O(n²) gates |
 | Grover 2Q | 2 | Quadratic search speedup, amplitude amplification |
 | Deutsch–Jozsa | 3 | Constant oracle, quantum parallelism |
-| Bernstein–Vazirani | 4 | Hidden bitstring recovery in 1 query (vs n classical) |
+| Bernstein–Vazirani | 4 | Hidden bitstring recovery in 1 query |
 | Quantum Teleportation | 3 | State transfer via Bell pair + 2 classical bits |
 | Superdense Coding | 2 | 2 classical bits per 1 qubit transmission |
 | QAOA Ring | n | Quantum Approximate Optimization |
@@ -134,6 +145,7 @@ P(x) = |αₓ|²       post-measurement: |Ψ⟩ → |x⟩
 ```
 ELVA-Q-0x53/
 ├── CMakeLists.txt          ← Build system (auto-fetches all deps)
+├── screenshots/            ← UI screenshots for README
 ├── include/
 │   ├── complex.hpp         ← Custom ℂ arithmetic (z = a + bi)
 │   ├── statevector.hpp     ← n-qubit state vector, measurement, expectations
@@ -157,7 +169,7 @@ ELVA-Q-0x53/
 
 ## 🔧 Dependencies
 
-All fetched automatically via CMake `FetchContent` — **no manual installation needed**.
+All fetched automatically via CMake `FetchContent` — **no manual installation needed.**
 
 | Library | Version | Purpose |
 |---|---|---|
@@ -175,7 +187,7 @@ All fetched automatically via CMake `FetchContent` — **no manual installation 
 | Two-qubit gate | O(2ⁿ) | O(1) extra |
 | Full circuit (depth d) | O(d · 2ⁿ) | O(2ⁿ) |
 | s-shot simulation | O(s · d · 2ⁿ) | O(2ⁿ) |
-| Max qubits (n=20) | 1,048,576 amplitudes | ~16 MB |
+| Max supported (n = 20) | 1,048,576 amplitudes | ~16 MB |
 
 ---
 
