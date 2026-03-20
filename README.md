@@ -32,13 +32,13 @@
 
 **QFT(4) Circuit — 4 Qubits · 10 Gates · Bloch Sphere · State Visualizer**
 
-![QFT Circuit with Bloch Sphere](screenshots/qft_circuit.png)
+![QFT Circuit with Bloch Sphere](ELVA-Q-0x53-Quantum-Circuit-Simulator/screenshots/qft_circuit.png)
 
 <br/>
 
 **QRNG(4) — Quantum Random Number Generator · 1024 Shots Histogram**
 
-![QRNG Histogram and Shot Results](screenshots/qrng_histogram.png)
+![QRNG Histogram and Shot Results](ELVA-Q-0x53-Quantum-Circuit-Simulator/screenshots/qrng_histogram.png)
 
 </div>
 
@@ -75,8 +75,8 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/ELVA-Q-0x53.git
-cd ELVA-Q-0x53
+git clone https://github.com/itss-meS/ELVA-Q-0x53-Quantum-Circuit-Simulator-.git
+cd ELVA-Q-0x53-Quantum-Circuit-Simulator
 
 # 2. Configure
 cmake -B build -DCMAKE_BUILD_TYPE=Release
